@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2A7B53A1BE3C566000E58AA /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7B5391BE3C566000E58AA /* SetupViewController.swift */; };
+		E2A7B53C1BE515DA000E58AA /* PlayConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7B53B1BE515DA000E58AA /* PlayConfiguration.swift */; };
 		E2CE56B31BE2A6120043D1CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56B21BE2A6120043D1CD /* AppDelegate.swift */; };
-		E2CE56B51BE2A6120043D1CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56B41BE2A6120043D1CD /* ViewController.swift */; };
+		E2CE56B51BE2A6120043D1CD /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56B41BE2A6120043D1CD /* PlayViewController.swift */; };
 		E2CE56B81BE2A6120043D1CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE56B61BE2A6120043D1CD /* Main.storyboard */; };
 		E2CE56BA1BE2A6120043D1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CE56B91BE2A6120043D1CD /* Assets.xcassets */; };
 		E2CE56BD1BE2A6120043D1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE56BB1BE2A6120043D1CD /* LaunchScreen.storyboard */; };
@@ -39,9 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2A7B5391BE3C566000E58AA /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		E2A7B53B1BE515DA000E58AA /* PlayConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayConfiguration.swift; sourceTree = "<group>"; };
 		E2CE56AF1BE2A6120043D1CD /* ShadyGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadyGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE56B21BE2A6120043D1CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2CE56B41BE2A6120043D1CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E2CE56B41BE2A6120043D1CD /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		E2CE56B71BE2A6120043D1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2CE56B91BE2A6120043D1CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2CE56BC1BE2A6120043D1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -109,7 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				E2CE56B21BE2A6120043D1CD /* AppDelegate.swift */,
-				E2CE56B41BE2A6120043D1CD /* ViewController.swift */,
+				E2A7B53B1BE515DA000E58AA /* PlayConfiguration.swift */,
+				E2A7B5391BE3C566000E58AA /* SetupViewController.swift */,
+				E2CE56B41BE2A6120043D1CD /* PlayViewController.swift */,
 				E2CE56E01BE2AC830043D1CD /* ShadyCell.swift */,
 				E2CE56E71BE2CA420043D1CD /* ColorMatrix.swift */,
 				E2CE56E31BE2C4250043D1CD /* Matrix.swift */,
@@ -274,9 +280,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2CE56E41BE2C4250043D1CD /* Matrix.swift in Sources */,
+				E2A7B53C1BE515DA000E58AA /* PlayConfiguration.swift in Sources */,
 				E2CE56E11BE2AC830043D1CD /* ShadyCell.swift in Sources */,
-				E2CE56B51BE2A6120043D1CD /* ViewController.swift in Sources */,
+				E2CE56B51BE2A6120043D1CD /* PlayViewController.swift in Sources */,
 				E2CE56E81BE2CA420043D1CD /* ColorMatrix.swift in Sources */,
+				E2A7B53A1BE3C566000E58AA /* SetupViewController.swift in Sources */,
 				E2CE56B31BE2A6120043D1CD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +514,7 @@
 				E2CE56D91BE2A6120043D1CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2CE56DA1BE2A6120043D1CD /* Build configuration list for PBXNativeTarget "ShadyGridTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +523,7 @@
 				E2CE56DC1BE2A6120043D1CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2CE56DD1BE2A6120043D1CD /* Build configuration list for PBXNativeTarget "ShadyGridUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +532,7 @@
 				E2CE56DF1BE2A6120043D1CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,12 +2,9 @@
 
 import UIKit
 
-let count = 3
+let cols = 3
+let index = 6
 
-var array = Array<Array<Double>>()
+var row = Int(index/cols);
+var col = index - (cols * row)
 
-for _ in 1...count {
-    array.append(Array(count: count, repeatedValue: Double()));
-}
-
-print(array)

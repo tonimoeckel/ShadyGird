@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PlayViewController.swift
 //  ShadyGrid
 //
 //  Created by Toni Möckel on 29.10.15.
@@ -8,15 +8,24 @@
 
 import UIKit
 
-class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+protocol PlayViewControllerDelegate {
     
-    let matrix: ColorMatrix = ColorMatrix(cols: 3, rows: 3, colorSteps: 8);
-    let colorSteps: Int = 8
+    func playViewController(playViewController: PlayViewController, didFinishWithScore score: Int)
+    
+}
+
+class PlayViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    var configuration: PlayConfiguration = PlayConfiguration()
+    var matrix: ColorMatrix = ColorMatrix(cols: 3, rows: 6, colorSteps: 8)
+    var colorSteps: Int = 8
+    var delegate: PlayViewControllerDelegate! = nil
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        matrix = ColorMatrix(cols: configuration.cols, rows: configuration.rows, colorSteps: configuration.colorSteps, color: configuration.color)
         matrix.fillWithRandom()
         self.collectionView?.reloadData()
         
@@ -60,13 +69,17 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let size = self.view.frame.size.width / CGFloat(matrix.colCount())
-        return CGSizeMake(size, size)
+        return CGSizeMake(self.view.frame.size.width / CGFloat(matrix.colCount()), self.view.frame.size.height / CGFloat(matrix.rowCount()))
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         matrix.increaseValue(indexPath.row)
+        collectionView.reloadData()
+        
+        if (matrix.isCompleted()){
+            self.delegate.playViewController(self, didFinishWithScore: matrix.score)
+        }
         
     }
     
