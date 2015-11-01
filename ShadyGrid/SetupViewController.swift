@@ -52,7 +52,7 @@ class SetupViewController: UIViewController, PlayViewControllerDelegate {
             
             let controller : PlayViewController = (segue.destinationViewController as? PlayViewController)!
             controller.delegate = self
-            controller.colorSteps = 8
+            controller.configuration = configuration
             
             break
         default:

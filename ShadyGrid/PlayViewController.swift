@@ -18,7 +18,6 @@ class PlayViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     var configuration: PlayConfiguration = PlayConfiguration()
     var matrix: ColorMatrix = ColorMatrix(cols: 3, rows: 6, colorSteps: 8)
-    var colorSteps: Int = 8
     var delegate: PlayViewControllerDelegate! = nil
     
     override func viewDidLoad() {
