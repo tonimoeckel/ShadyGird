@@ -166,4 +166,16 @@ class ColorMatrixTests: XCTestCase {
         XCTAssertTrue(matrix.isCompleted())
     }
     
+    func testIsIncreaeAllowed() {
+        
+        let testMatrix = ColorMatrix(cols: 2, rows: 2, colorSteps:  2)
+        testMatrix[0,0] = 0
+        testMatrix[0,1] = 1
+        testMatrix[1,0] = 2
+        testMatrix[1,1] = 0
+        
+        
+        
+    }
+    
 }

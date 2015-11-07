@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ColorMatrix: Matrix {
+class ColorMatrix: Matrix, NSCopying {
     
     var colorMode:PlayConfiguration.ColorMode = PlayConfiguration.ColorMode(rawValue: 0)!
     var colorSteps:Int = 8
     var score:Int = 0
+    var increasePath: [Int] = []
     
     init(cols: Int, rows: Int, colorSteps: Int) {
         super.init(cols: cols, rows: rows)
@@ -33,7 +34,6 @@ class ColorMatrix: Matrix {
         
         for (index, _) in data.enumerate() {
             data[index] = Double(arc4random_uniform(UInt32(colorSteps)))
-            //            data[index] = Double(self.calcPowOfValue(Int(arc4random_uniform(UInt32(colorSteps))), radix: 2))
         }
         
     }
@@ -88,9 +88,15 @@ class ColorMatrix: Matrix {
     }
     
     func increaseValue(index: Int) -> [Int] {
+        
+        if (!isIncreaseAllowed(index)){
+            return []
+        }
+        
+        self.increasePath.append(index)
         score++
         let equalIndexes = findEqualElements(index)
-        
+
         for increaseIndex in equalIndexes {
             var value = data[increaseIndex]
             value++
@@ -98,6 +104,12 @@ class ColorMatrix: Matrix {
         }
         
         return equalIndexes
+        
+    }
+    
+    func isIncreaseAllowed(index: Int) -> Bool {
+        
+        return data[index] < Double(colorSteps)
         
     }
     
@@ -137,6 +149,17 @@ class ColorMatrix: Matrix {
         
         return false
         
+    }
+    
+    func copyWithZone(zone: NSZone) -> AnyObject {
+        
+        let object = ColorMatrix(cols: cols, rows: rows, colorSteps: colorSteps)
+        object.data = NSMutableArray(array: data, copyItems: true) as AnyObject as! [Double]
+        object.increasePath = increasePath
+        object.score = score
+        object.colorMode = colorMode
+        object.colorSteps = colorSteps
+        return object
     }
     
 }
