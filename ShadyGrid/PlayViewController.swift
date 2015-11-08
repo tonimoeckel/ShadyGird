@@ -17,22 +17,25 @@ protocol PlayViewControllerDelegate {
 class PlayViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var configuration: PlayConfiguration = PlayConfiguration()
-    var matrix: ColorMatrix = ColorMatrix(cols: 3, rows: 6, colorSteps: 8)
+    var matrix: GameMatrixProtocol = AdjacentMatrix(cols: 3, rows: 6, colorSteps: 8)
     var delegate: PlayViewControllerDelegate! = nil
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        matrix = ColorMatrix(cols: configuration.cols, rows: configuration.rows, colorSteps: configuration.colorSteps, color: configuration.color)
-        matrix.fillWithRandom()
+        matrix = createMatrix(configuration)
         self.collectionView?.reloadData()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func createMatrix(configuration: PlayConfiguration) -> GameMatrixProtocol {
+        
+        let colorMatrix: AdjacentMatrix = AdjacentMatrix(cols: configuration.cols, rows: configuration.rows, colorSteps: configuration.colorSteps, color: configuration.color)
+        colorMatrix.fillWithRandom()
+        
+        return colorMatrix
+        
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,10 +49,13 @@ class PlayViewController: UICollectionViewController, UICollectionViewDelegateFl
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let  cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! ShadyCell
-        cell.tag = indexPath.row
-        cell.backgroundColor = matrix.colorForElement(indexPath.row)
+        configure(cell, indexPath: indexPath)
         return cell
         
+    }
+    
+    func configure(cell: ShadyCell, indexPath: NSIndexPath) -> Void {
+        cell.contentView.backgroundColor = matrix.colorForElement(indexPath.row)
     }
     
     

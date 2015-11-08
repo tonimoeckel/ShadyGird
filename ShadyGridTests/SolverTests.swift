@@ -21,10 +21,10 @@ class SolverTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSolve_FourMatrix() {
+    func testSolveShouldReturnWinningStrategies() {
 
         let solver: Solver = Solver()
-        let matrix: ColorMatrix = ColorMatrix(cols: 2, rows: 2, colorSteps: 2)
+        let matrix: AdjacentMatrix = AdjacentMatrix(cols: 2, rows: 2, colorSteps: 2)
 
         matrix[1,0] = 0
         matrix[1,0] = 1

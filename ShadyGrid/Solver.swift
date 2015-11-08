@@ -8,47 +8,41 @@
 
 import UIKit
 
-class Solver: NSObject {
+class Solver {
     
-    var result:[ColorMatrix] = []
-
-    func solve(matrix: ColorMatrix) -> Array<[Int]> {
+    func solve(matrix: AdjacentMatrix) -> Array<[Int]> {
         
         var solutions: Array<[Int]> = []
-        result = []
-        
-        self.iterateMove(matrix)
+        let result = self.iterateMove(matrix)
         
         for resultMatrix in result {
             solutions.append(resultMatrix.increasePath)
         }
         
         return solutions
-        
     }
     
-    
-    private func iterateMove(matrix: ColorMatrix) -> Void {
+    private func iterateMove(matrix: AdjacentMatrix) -> [AdjacentMatrix]  {
         
+        var results: [AdjacentMatrix] = []
         if (!matrix.isCompleted()){
             for index in 0...matrix.count()-1 {
-                let shadowMatrix = matrix.copy() as! ColorMatrix
+                let shadowMatrix = matrix.copy() as! AdjacentMatrix
                 let increaseAllowed = shadowMatrix.isIncreaseAllowed(index);
                 
                 if (increaseAllowed){
                     shadowMatrix.increaseValue(index)
                 
                     if (shadowMatrix.isCompleted()){
-                        result.append(shadowMatrix)
+                        results.append(shadowMatrix)
                     }else {
-                        iterateMove(shadowMatrix)
+                        results.appendContentsOf(iterateMove(shadowMatrix))
                     }
                 }
-                
             }
         }
         
+        return results;
     }
 
-    
 }

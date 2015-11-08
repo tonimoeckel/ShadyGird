@@ -1,5 +1,5 @@
 //
-//  ColorMatrix.swift
+//  AdjacentMatrix.swift
 //  ShadyGrid
 //
 //  Created by Toni Möckel on 29.10.15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorMatrix: Matrix, NSCopying {
+class AdjacentMatrix: Matrix, GameMatrixProtocol, NSCopying {
     
     var colorMode:PlayConfiguration.ColorMode = PlayConfiguration.ColorMode(rawValue: 0)!
     var colorSteps:Int = 8
@@ -56,7 +56,7 @@ class ColorMatrix: Matrix, NSCopying {
         
     }
     
-    private func generateColor(value: Float, colorMode: PlayConfiguration.ColorMode) -> UIColor {
+    func generateColor(value: Float, colorMode: PlayConfiguration.ColorMode) -> UIColor {
         
         let color:UIColor
         
@@ -153,7 +153,7 @@ class ColorMatrix: Matrix, NSCopying {
     
     func copyWithZone(zone: NSZone) -> AnyObject {
         
-        let object = ColorMatrix(cols: cols, rows: rows, colorSteps: colorSteps)
+        let object = AdjacentMatrix(cols: cols, rows: rows, colorSteps: colorSteps)
         object.data = NSMutableArray(array: data, copyItems: true) as AnyObject as! [Double]
         object.increasePath = increasePath
         object.score = score

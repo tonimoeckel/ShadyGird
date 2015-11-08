@@ -22,5 +22,18 @@ class PlayConfiguration: NSObject {
     var color: ColorMode = ColorMode.BlackWihte
     var colorSteps: Int = 8
     
+    override init (){
+        super.init()
+    }
+    
+    init(cols: Int, rows: Int, color: ColorMode, colorSteps: Int) {
+        
+        super.init()
+        self.cols = cols
+        self.rows = rows
+        self.color = color
+        self.colorSteps = colorSteps
+        
+    }
     
 }

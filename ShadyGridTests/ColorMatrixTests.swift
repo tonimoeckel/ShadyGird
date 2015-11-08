@@ -11,7 +11,7 @@ import XCTest
 
 class ColorMatrixTests: XCTestCase {
     
-    let matrix:ColorMatrix = ColorMatrix(cols: 3, rows: 3, colorSteps: 8)
+    let matrix: AdjacentMatrix = AdjacentMatrix(cols: 3, rows: 3, colorSteps: 8)
     
     override func setUp() {
         super.setUp()
@@ -168,13 +168,37 @@ class ColorMatrixTests: XCTestCase {
     
     func testIsIncreaeAllowed() {
         
-        let testMatrix = ColorMatrix(cols: 2, rows: 2, colorSteps:  2)
+        let testMatrix = AdjacentMatrix(cols: 2, rows: 2, colorSteps:  2)
         testMatrix[0,0] = 0
         testMatrix[0,1] = 1
         testMatrix[1,0] = 2
         testMatrix[1,1] = 0
         
         
+        
+    }
+    
+    func testGenerateColorShouldReturnBlackWhite(){
+        
+        XCTAssertEqual(matrix.generateColor(1, colorMode: PlayConfiguration.ColorMode.BlackWihte), UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 1))
+        
+    }
+    
+    func testGenerateColorShouldReturnRed(){
+        
+        XCTAssertEqual(matrix.generateColor(1, colorMode: PlayConfiguration.ColorMode.Red), UIColor(colorLiteralRed: 1, green: 0, blue: 0, alpha: 1))
+        
+    }
+    
+    func testGenerateColorShouldReturnGreen(){
+        
+        XCTAssertEqual(matrix.generateColor(1, colorMode: PlayConfiguration.ColorMode.Green), UIColor(colorLiteralRed: 0, green: 1, blue: 0, alpha: 1))
+        
+    }
+    
+    func testGenerateColorShouldReturnBlue(){
+        
+        XCTAssertEqual(matrix.generateColor(1, colorMode: PlayConfiguration.ColorMode.Blue), UIColor(colorLiteralRed: 0, green: 0, blue: 1, alpha: 1))
         
     }
     
