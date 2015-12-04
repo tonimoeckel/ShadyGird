@@ -52,6 +52,15 @@
             </SkippedTests>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E2CE56C21BE2A6120043D1CD"
+            BuildableName = "ShadyGridTests.xctest"
+            BlueprintName = "ShadyGridTests"
+            ReferencedContainer = "container:ShadyGrid.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>

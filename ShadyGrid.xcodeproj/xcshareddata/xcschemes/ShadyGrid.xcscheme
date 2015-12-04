@@ -39,16 +39,6 @@
                ReferencedContainer = "container:ShadyGrid.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2CE56CD1BE2A6120043D1CD"
-               BuildableName = "ShadyGridUITests.xctest"
-               BlueprintName = "ShadyGridUITests"
-               ReferencedContainer = "container:ShadyGrid.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
