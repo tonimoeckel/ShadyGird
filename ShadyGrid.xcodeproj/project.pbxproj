@@ -20,7 +20,6 @@
 		E2CE56BA1BE2A6120043D1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CE56B91BE2A6120043D1CD /* Assets.xcassets */; };
 		E2CE56BD1BE2A6120043D1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2CE56BB1BE2A6120043D1CD /* LaunchScreen.storyboard */; };
 		E2CE56C81BE2A6120043D1CD /* ShadyGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56C71BE2A6120043D1CD /* ShadyGridTests.swift */; };
-		E2CE56D31BE2A6120043D1CD /* ShadyGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56D21BE2A6120043D1CD /* ShadyGridUITests.swift */; };
 		E2CE56E11BE2AC830043D1CD /* ShadyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56E01BE2AC830043D1CD /* ShadyCell.swift */; };
 		E2CE56E41BE2C4250043D1CD /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56E31BE2C4250043D1CD /* Matrix.swift */; };
 		E2CE56E61BE2C68F0043D1CD /* MatrixTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE56E51BE2C68F0043D1CD /* MatrixTest.swift */; };
@@ -30,13 +29,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		E2CE56C41BE2A6120043D1CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E2CE56A71BE2A6120043D1CD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E2CE56AE1BE2A6120043D1CD;
-			remoteInfo = ShadyGrid;
-		};
-		E2CE56CF1BE2A6120043D1CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E2CE56A71BE2A6120043D1CD /* Project object */;
 			proxyType = 1;
@@ -65,7 +57,6 @@
 		E2CE56C31BE2A6120043D1CD /* ShadyGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadyGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE56C71BE2A6120043D1CD /* ShadyGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadyGridTests.swift; sourceTree = "<group>"; };
 		E2CE56C91BE2A6120043D1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2CE56CE1BE2A6120043D1CD /* ShadyGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadyGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE56D21BE2A6120043D1CD /* ShadyGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadyGridUITests.swift; sourceTree = "<group>"; };
 		E2CE56D41BE2A6120043D1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2CE56E01BE2AC830043D1CD /* ShadyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadyCell.swift; sourceTree = "<group>"; };
@@ -89,13 +80,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B78B74EE57E8953D988A041 /* Pods_ShadyGridTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2CE56CB1BE2A6120043D1CD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +120,6 @@
 			children = (
 				E2CE56AF1BE2A6120043D1CD /* ShadyGrid.app */,
 				E2CE56C31BE2A6120043D1CD /* ShadyGridTests.xctest */,
-				E2CE56CE1BE2A6120043D1CD /* ShadyGridUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,24 +208,6 @@
 			productReference = E2CE56C31BE2A6120043D1CD /* ShadyGridTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E2CE56CD1BE2A6120043D1CD /* ShadyGridUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E2CE56DD1BE2A6120043D1CD /* Build configuration list for PBXNativeTarget "ShadyGridUITests" */;
-			buildPhases = (
-				E2CE56CA1BE2A6120043D1CD /* Sources */,
-				E2CE56CB1BE2A6120043D1CD /* Frameworks */,
-				E2CE56CC1BE2A6120043D1CD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E2CE56D01BE2A6120043D1CD /* PBXTargetDependency */,
-			);
-			name = ShadyGridUITests;
-			productName = ShadyGridUITests;
-			productReference = E2CE56CE1BE2A6120043D1CD /* ShadyGridUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -257,10 +222,6 @@
 						CreatedOnToolsVersion = 7.1;
 					};
 					E2CE56C21BE2A6120043D1CD = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = E2CE56AE1BE2A6120043D1CD;
-					};
-					E2CE56CD1BE2A6120043D1CD = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = E2CE56AE1BE2A6120043D1CD;
 					};
@@ -281,7 +242,6 @@
 			targets = (
 				E2CE56AE1BE2A6120043D1CD /* ShadyGrid */,
 				E2CE56C21BE2A6120043D1CD /* ShadyGridTests */,
-				E2CE56CD1BE2A6120043D1CD /* ShadyGridUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -298,13 +258,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E2CE56C11BE2A6120043D1CD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E2CE56CC1BE2A6120043D1CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -390,14 +343,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2CE56CA1BE2A6120043D1CD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E2CE56D31BE2A6120043D1CD /* ShadyGridUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -405,11 +350,6 @@
 			isa = PBXTargetDependency;
 			target = E2CE56AE1BE2A6120043D1CD /* ShadyGrid */;
 			targetProxy = E2CE56C41BE2A6120043D1CD /* PBXContainerItemProxy */;
-		};
-		E2CE56D01BE2A6120043D1CD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E2CE56AE1BE2A6120043D1CD /* ShadyGrid */;
-			targetProxy = E2CE56CF1BE2A6120043D1CD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -564,30 +504,6 @@
 			};
 			name = Release;
 		};
-		E2CE56DE1BE2A6120043D1CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ShadyGridUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quemb.ShadyGridUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ShadyGrid;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		E2CE56DF1BE2A6120043D1CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ShadyGridUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quemb.ShadyGridUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ShadyGrid;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -614,15 +530,6 @@
 			buildConfigurations = (
 				E2CE56DB1BE2A6120043D1CD /* Debug */,
 				E2CE56DC1BE2A6120043D1CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E2CE56DD1BE2A6120043D1CD /* Build configuration list for PBXNativeTarget "ShadyGridUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E2CE56DE1BE2A6120043D1CD /* Debug */,
-				E2CE56DF1BE2A6120043D1CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
