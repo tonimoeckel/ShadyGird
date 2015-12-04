@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		27DD922D82FD83C98FB03B57 /* ShadyCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DD91A9B59D7A9D400599C7 /* ShadyCellTests.swift */; };
 		6B78B74EE57E8953D988A041 /* Pods_ShadyGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414B83A3FA7D6270527AF75 /* Pods_ShadyGridTests.framework */; };
 		89288E831BEBDB5F001907C9 /* Solver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89288E821BEBDB5F001907C9 /* Solver.swift */; };
 		89288E851BEBDCC4001907C9 /* SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89288E841BEBDCC4001907C9 /* SolverTests.swift */; };
@@ -48,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		2445CEA3042992EFEA4CA955 /* Pods-ShadyGridTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShadyGridTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShadyGridTests/Pods-ShadyGridTests.debug.xcconfig"; sourceTree = "<group>"; };
-		27DD91A9B59D7A9D400599C7 /* ShadyCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadyCellTests.swift; sourceTree = "<group>"; };
 		8414B83A3FA7D6270527AF75 /* Pods_ShadyGridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadyGridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89288E821BEBDB5F001907C9 /* Solver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solver.swift; sourceTree = "<group>"; };
 		89288E841BEBDCC4001907C9 /* SolverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolverTests.swift; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				E2CE56E91BE2D3B20043D1CD /* ColorMatrixTests.swift */,
 				89288E841BEBDCC4001907C9 /* SolverTests.swift */,
 				E2CA284B1BEF77F3005D0D76 /* PlayViewControllerTests.swift */,
-				27DD91A9B59D7A9D400599C7 /* ShadyCellTests.swift */,
 			);
 			path = ShadyGridTests;
 			sourceTree = "<group>";
@@ -390,7 +387,6 @@
 				E2CE56EA1BE2D3B20043D1CD /* ColorMatrixTests.swift in Sources */,
 				89288E851BEBDCC4001907C9 /* SolverTests.swift in Sources */,
 				E2CE56C81BE2A6120043D1CD /* ShadyGridTests.swift in Sources */,
-				27DD922D82FD83C98FB03B57 /* ShadyCellTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
