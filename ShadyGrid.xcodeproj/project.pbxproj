@@ -57,8 +57,6 @@
 		E2CE56C31BE2A6120043D1CD /* ShadyGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadyGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2CE56C71BE2A6120043D1CD /* ShadyGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadyGridTests.swift; sourceTree = "<group>"; };
 		E2CE56C91BE2A6120043D1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2CE56D21BE2A6120043D1CD /* ShadyGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadyGridUITests.swift; sourceTree = "<group>"; };
-		E2CE56D41BE2A6120043D1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2CE56E01BE2AC830043D1CD /* ShadyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadyCell.swift; sourceTree = "<group>"; };
 		E2CE56E21BE2C12A0043D1CD /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		E2CE56E31BE2C4250043D1CD /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			children = (
 				E2CE56B11BE2A6120043D1CD /* ShadyGrid */,
 				E2CE56C61BE2A6120043D1CD /* ShadyGridTests */,
-				E2CE56D11BE2A6120043D1CD /* ShadyGridUITests */,
 				E2CE56B01BE2A6120043D1CD /* Products */,
 				3EF95A0B759E73894DC54A6C /* Pods */,
 				9C962909BFA1563C1A0604CB /* Frameworks */,
@@ -156,15 +153,6 @@
 				E2CA284B1BEF77F3005D0D76 /* PlayViewControllerTests.swift */,
 			);
 			path = ShadyGridTests;
-			sourceTree = "<group>";
-		};
-		E2CE56D11BE2A6120043D1CD /* ShadyGridUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E2CE56D21BE2A6120043D1CD /* ShadyGridUITests.swift */,
-				E2CE56D41BE2A6120043D1CD /* Info.plist */,
-			);
-			path = ShadyGridUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
